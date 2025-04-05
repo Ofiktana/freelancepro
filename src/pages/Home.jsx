@@ -4,7 +4,7 @@ function Home() {
   return (
     <HStack>
       <Button bg='black'>Click me</Button>
-      <Button bg='purple.400'>Edit Profile</Button>
+      <Button bg='purple.800'>Edit Profile</Button>
     </HStack>
   )
 }
