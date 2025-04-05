@@ -2,10 +2,9 @@ import { Button, HStack } from "@chakra-ui/react"
 
 function Home() {
   return (
-    <HStack className="bg-yellow">
-      <Button bg='black'>Click me</Button>
-      <Button bg='purple.800'>Edit Profile</Button>
-    </HStack>
+    <div className="bg-yellow-200 w-60 h-60 rounded-2xl border-2 border-red-500 flex justify-center items-center">
+      <p className="border font-bold">Hello Home</p>
+    </div>
   )
 }
 
