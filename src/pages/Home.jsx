@@ -1,11 +1,13 @@
-import { Button, HStack } from "@chakra-ui/react"
+import TopSection from "@/components/dashboardComponents/TopSection"
+import BottomSection from "@/components/dashboardComponents/BottomSection"
 
 function Home() {
 
   return (
-    <div>
-      <p className="border font-bold">Hello Home</p>
-    </div>
+    <>
+    <TopSection />
+    <BottomSection />
+    </>
   )
 }
 
