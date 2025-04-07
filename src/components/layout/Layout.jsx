@@ -25,7 +25,7 @@ function Layout() {
         <Box className="w-(--main-width) min-h-(--sidebar-height)">
           <Box
             as="header"
-            bg="white"
+            bg="purple.50"
             className="w-(--main-width) h-(--header-height)"
           >
             {/*Header Section */}
@@ -35,7 +35,7 @@ function Layout() {
             display="block"
             maxW="1280px"
             mx="auto"
-            bg="purple.50"
+            bg=""
             className="w-(--main-width) min-h-(--min-page-height)"
           >
             {/*Main Content */}
