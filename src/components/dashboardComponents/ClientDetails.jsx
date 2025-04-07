@@ -1,4 +1,3 @@
-import { personData } from "@/datasets/users";
 import { Avatar, HStack, Stack, Text, Link } from "@chakra-ui/react"
 
 function ClientDetails({ user }) {

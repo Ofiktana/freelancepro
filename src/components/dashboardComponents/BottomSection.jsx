@@ -10,9 +10,9 @@ function BottomSection() {
   const currentUser = useContext(DataContext).user
 
   return (
-    <Box as="section" padding="8">
-      <Flex justify='space-between'>
-        <HStack marginBottom="4" align="center">
+    <Box as="section" padding="8" >
+      <Flex marginBottom="4" justify='space-between'>
+        <HStack align="center">
           <Text textStyle="2xl" textAlign="left" fontWeight="semibold">
             Active projects
           </Text>
@@ -24,12 +24,12 @@ function BottomSection() {
           >{`(${currentUser?.projects?.length})`}</Text>
         </HStack>
         <Button colorPalette="purple" variant="solid" borderRadius='lg'>
-          <CiSquarePlus /> Add New Project
+          <CiSquarePlus /> New Project
         </Button>
       </Flex>
       <VStack>
         <BottomSectionHeader />
-        <Stack separator={<StackSeparator />}>
+        <Stack separator={<StackSeparator />} height='450px' className="overflow-y-auto">
           {
             currentUser.projects.map((project) => {
               return <BottomSectionRow project={project} />
