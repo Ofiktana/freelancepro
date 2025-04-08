@@ -8,7 +8,7 @@ function JobApplication({ application }) {
           <Badge colorPalette={application.status_color} variant="subtle">
             {application.status_text}
           </Badge>
-          <Text textStyle="xs" color="purple">
+          <Text textStyle="xs" color="purple.600" fontWeight='medium'>
             Applied on {application.date}
           </Text>
         </Flex>

@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom"
 import { createContext } from 'react'
 import { useParams } from "react-router-dom"
 import { users } from "@/datasets/users"
+import Header from "../headerComponents/Header"
+import Navigation from "../navComponents/Navigation"
 
 const DataContext = createContext()
 
@@ -17,18 +19,21 @@ function Layout() {
         <Box
           as="nav"
           className="w-(--sidebar-width) min-h-(--sidebar-height)"
-          bg="gray.600"
+          bg="black"
           display={{ base: "none", lg: "flex" }}
         >
           {/*Navigation Sidebar */}
+          <Navigation />
         </Box>
         <Box className="w-(--main-width) min-h-(--sidebar-height)">
           <Box
             as="header"
-            bg="purple.50"
+            bg="white"
+            borderBottom='2px solid lightgray'
             className="w-(--main-width) h-(--header-height)"
           >
             {/*Header Section */}
+            <Header />
           </Box>
           <Box
             as="main"

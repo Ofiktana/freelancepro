@@ -4,6 +4,7 @@ import { useContext } from "react";
 import BottomSectionHeader from "./BottomSectionHeader";
 import BottomSectionRow from "./BottomSectionRow";
 import { CiSquarePlus } from "react-icons/ci";
+import ContactCard from "@/components/generalComponents/ContactCard";
 
 function BottomSection() {
 
@@ -13,7 +14,7 @@ function BottomSection() {
     <Box as="section" padding="8" >
       <Flex marginBottom="4" justify='space-between'>
         <HStack align="center">
-          <Text textStyle="2xl" textAlign="left" fontWeight="semibold">
+          <Text textStyle={{base: 'xl', lg: '2xl'}} textAlign="left" fontWeight="semibold">
             Active projects
           </Text>
           <Text
@@ -37,6 +38,7 @@ function BottomSection() {
           }
         </Stack>
       </VStack>
+      
     </Box>
   );
 }
