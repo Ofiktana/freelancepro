@@ -44,10 +44,10 @@ function Navigation() {
       direction="column"
       justify="space-between"
       py="10"
-      height="100vh"
-      // width='100%'
-      width="calc(var(--sidebar-width) - 1rem)"
-      className="fixed top-0 left-0"
+      height="90vh"
+      width={{base: '100%', lg: 'calc(var(--sidebar-width) - 1rem)'}}
+      className="lg:fixed lg:top-0 lg:left-0"
+      onClick={() => {}}
     >
       <Flex width="100%" direction="column">
         {navItems.map((item) => (

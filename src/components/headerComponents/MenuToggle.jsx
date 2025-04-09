@@ -6,6 +6,7 @@ import {
   HStack,
   Portal,
 } from "@chakra-ui/react"
+import Navigation from "../navComponents/Navigation";
 
 import { CiMenuBurger } from "react-icons/ci";
 
@@ -27,21 +28,13 @@ function MenuToggle() {
                   roundedTop={placement === "bottom" ? "l3" : undefined}
                   roundedBottom={placement === "top" ? "l3" : undefined}
                 >
-                  <Drawer.Header>
-                    <Drawer.Title>Drawer Title</Drawer.Title>
+                  <Drawer.Header bg='black' color={'white'}>
+                    <Drawer.Title></Drawer.Title>
                   </Drawer.Header>
-                  <Drawer.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                  <Drawer.Body bg='black'>
+                    <Navigation />
                   </Drawer.Body>
-                  <Drawer.Footer>
-                    <Drawer.ActionTrigger asChild>
-                      <Button variant="outline">Cancel</Button>
-                    </Drawer.ActionTrigger>
-                    <Button>Save</Button>
-                  </Drawer.Footer>
-                  <Drawer.CloseTrigger asChild>
+                  <Drawer.CloseTrigger color={'white'} asChild>
                     <CloseButton size="sm" />
                   </Drawer.CloseTrigger>
                 </Drawer.Content>
