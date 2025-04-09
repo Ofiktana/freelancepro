@@ -4,7 +4,7 @@ import ProgressBar from './ProgressBar';
 
 function BottomSectionRow({ project }) {
   return (
-    <Stack direction="row" bg="white" paddingX="2" borderRadius="lg">
+    <Stack direction="row" paddingX="2" borderRadius="lg">
       <Flex
         w="150px"
         color=""
