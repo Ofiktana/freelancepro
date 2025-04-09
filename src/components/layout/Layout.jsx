@@ -44,7 +44,7 @@ function Layout() {
             className="w-(--main-width) min-h-(--min-page-height)"
           >
             {/*Main Content */}
-            <Outlet />
+            <Outlet />  
           </Box>
         </Box>
       </Flex>

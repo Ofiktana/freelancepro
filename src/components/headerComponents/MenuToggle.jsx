@@ -11,7 +11,7 @@ import { CiMenuBurger } from "react-icons/ci";
 
 function MenuToggle() {
   return (
-    <HStack wrap="wrap">
+    <HStack wrap="wrap" display={{base:'block', lg:'none'}}>
       <For each={["start"]}>
         {(placement) => (
           <Drawer.Root key={placement} placement={placement}>

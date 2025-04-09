@@ -1,9 +1,9 @@
-import React from 'react'
+import { Center, Flex } from "@chakra-ui/react";
 
 function Profile() {
   return (
-    <div>Profile</div>
-  )
+    <Center height={'100vh'} width='100%'>Profile</Center>
+  );
 }
 
-export default Profile
+export default Profile;

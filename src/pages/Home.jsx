@@ -6,7 +6,7 @@ import { Flex } from "@chakra-ui/react";
 
 function Home() {
   return (
-    <Flex direction={{ base: "column", xl: "row" }} padding={{ xl: "4" }}>
+    <Flex direction={{ base: "column", xl: "row" }} padding={{ xl: "4" }} width={'100%'}>
       <Flex direction="column">
         <TopSection />
         <BottomSection />

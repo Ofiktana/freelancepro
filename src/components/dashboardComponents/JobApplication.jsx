@@ -26,14 +26,16 @@ function JobApplication({ application }) {
 
         <Flex gap="2">
           {application.tags.map((tag) => (
-            <Button
+            <Badge
               size="sm"
-              borderRadius="2xl"
+              borderRadius="lg"
               colorPalette="green"
               variant="outline"
+              padding='2'
+
             >
               {tag}
-            </Button>
+            </Badge>
           ))}
         </Flex>
       </Stack>
