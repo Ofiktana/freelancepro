@@ -28,7 +28,6 @@ function Layout() {
         <Box className="w-(--main-width) min-h-(--sidebar-height)">
           <Box
             as="header"
-            bg="white"
             borderBottom='2px solid lightgray'
             className="w-(--main-width) h-(--header-height)"
           >
