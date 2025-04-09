@@ -47,7 +47,7 @@ function Header() {
         >
           {headerText}
         </Text>
-        <SwitchControl />
+        <SwitchControl display={{base: 'none', sm:'flex'}} />
         <SearchField width={'200px'} display={{ base: "none", sm: "block" }} />
         <Icon size={"xl"}>
           <CiBellOn />

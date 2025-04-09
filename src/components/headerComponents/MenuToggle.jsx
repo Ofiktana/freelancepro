@@ -5,14 +5,14 @@ import {
   For,
   HStack,
   Portal,
-} from "@chakra-ui/react"
+} from "@chakra-ui/react";
 import Navigation from "../navComponents/Navigation";
-
+import SwitchControl from "./SwitchControl";
 import { CiMenuBurger } from "react-icons/ci";
 
 function MenuToggle() {
   return (
-    <HStack wrap="wrap" display={{base:'block', lg:'none'}}>
+    <HStack wrap="wrap" display={{ base: "block", lg: "none" }}>
       <For each={["start"]}>
         {(placement) => (
           <Drawer.Root key={placement} placement={placement}>
@@ -28,15 +28,22 @@ function MenuToggle() {
                   roundedTop={placement === "bottom" ? "l3" : undefined}
                   roundedBottom={placement === "top" ? "l3" : undefined}
                 >
-                  <Drawer.Header bg='black' color={'white'}>
-                    <Drawer.Title></Drawer.Title>
-                  </Drawer.Header>
-                  <Drawer.Body bg='black'>
-                    <Navigation />
-                  </Drawer.Body>
-                  <Drawer.CloseTrigger color={'white'} asChild>
-                    <CloseButton size="sm" />
-                  </Drawer.CloseTrigger>
+                  <Drawer.Context>
+                    {(store) => (
+                      <>
+                        <Drawer.Header bg="black" color={"white"}>
+                          <Drawer.Title></Drawer.Title>
+                        </Drawer.Header>
+                        <Drawer.Body bg="black">
+                          <Navigation handleToggle={store.setOpen} />
+                          <SwitchControl display={{base: 'flex', sm:'none'}} color='white' />
+                        </Drawer.Body>
+                        <Drawer.CloseTrigger color={"white"} asChild>
+                          <CloseButton size="sm" />
+                        </Drawer.CloseTrigger>
+                      </>
+                    )}
+                  </Drawer.Context>
                 </Drawer.Content>
               </Drawer.Positioner>
             </Portal>
@@ -44,7 +51,7 @@ function MenuToggle() {
         )}
       </For>
     </HStack>
-  )
+  );
 }
 
-export default MenuToggle
+export default MenuToggle;

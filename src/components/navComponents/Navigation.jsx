@@ -22,7 +22,7 @@ function NavItem({ icon, text }) {
   );
 }
 
-function Navigation() {
+function Navigation({ handleToggle }) {
   const userID = useParams().id;
 
   const navItems = [
@@ -47,7 +47,7 @@ function Navigation() {
       height="90vh"
       width={{base: '100%', lg: 'calc(var(--sidebar-width) - 1rem)'}}
       className="lg:fixed lg:top-0 lg:left-0"
-      onClick={() => {}}
+      onClick={() => {handleToggle(false)}}
     >
       <Flex width="100%" direction="column">
         {navItems.map((item) => (

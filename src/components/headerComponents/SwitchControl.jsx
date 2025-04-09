@@ -1,8 +1,8 @@
 import { Switch } from "@chakra-ui/react"
 
-function SwitchControl() {
+function SwitchControl(props) {
   return (
-    <Switch.Root display={{base: 'none', sm:'flex'}} colorPalette={'purple'}>
+    <Switch.Root {...props} colorPalette={'purple'}>
       <Switch.HiddenInput />
       <Switch.Control />
       <Switch.Label>Open to work</Switch.Label>
